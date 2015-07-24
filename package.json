@@ -1,0 +1,37 @@
+{
+  "name": "angulartics-flurry",
+  "version": "0.1.0",
+  "description": "Flurry plugin for Angulartics",
+  "keywords": [
+    "flurry",
+    "analytics",
+    "plugin",
+    "angular",
+    "angulartics"
+  ],
+  "author": "Saman Barghi <saman.b@gmail.com> (https://github.com/samanbarghi)",
+  "contributors": [
+    "Tim Elfelt <timelf123@gmail.com> (https://github.com/timelf123)",
+    "Luis Farzati <lfarzati@gmail.com> (https://github.com/luisfarzati)"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "build": "mkdir -p dist && uglifyjs lib/angulartics-flurry.js --compress --source-map dist/angulartics-flurry.min.js.map --source-map-root .. --source-map-url ../dist/angulartics-flurry.min.js.map -o dist/angulartics-flurry.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angulartics/angulartics-flurry"
+  },
+  "bugs": {
+    "url": "https://github.com/angulartics/angulartics-flurry/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "angulartics": "~0.18.0"
+  },
+  "devDependencies": {
+    "uglify-js": "^2.4.23"
+  }
+}
